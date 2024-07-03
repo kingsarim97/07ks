@@ -1,0 +1,119 @@
+<link href="https://css.gg/css" rel="stylesheet" /> 
+
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+header{
+    height: 40px;
+    background-color: rgb(0, 119, 128);
+    color: white;
+}
+
+#dekstop-menu-container{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    float: right;
+
+}
+
+li{
+    flex-grow: 1;
+    line-height:40px;
+}
+
+.desktop-menu-item{
+display: none;
+}
+
+
+
+.gg-menu{
+    display: none;    
+    top:20px;
+    position: absolute;
+    right: 18px;
+}
+
+#mobile-menu{
+
+    width: 100%;
+    position: absolute;
+    left: 0;
+
+    color: black;
+    background-color: white;
+    font-size: large;
+        display: none;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    #mobile-menu li{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+
+    .ham-menu{
+        color: white;
+        border: none;
+        background-color: transparent;
+    }
+
+
+    .ham-menu:focus + ol{
+        display: block !important;
+    }
+
+
+@media screen and (min-width:601px) {
+    
+   .desktop-menu-item{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    
+    .gg-menu{
+        display: block;
+    }
+
+}
+
+
+
+</style>
+
+
+<header>
+
+    <ol id="dekstop-menu-container">
+        <li class="desktop-menu-item">home</li>
+        <li class="desktop-menu-item">login</li>
+        <li class="desktop-menu-item">signup</li>
+        <li class="desktop-menu-item">dashboard</li>
+        <li class="desktop-menu-item">contact us</li>
+        <li>
+            <button class="ham-menu">
+                <i class="gg-menu"></i>
+            </button>
+
+            <ol id="mobile-menu">
+                <li>home</li>
+                <li>login</li>
+                <li>signup</li>
+                <li>dashboard</li>
+                <li>contact us</li>
+            </ol>
+
+        </li>
+    </ol>
+
+</header>
